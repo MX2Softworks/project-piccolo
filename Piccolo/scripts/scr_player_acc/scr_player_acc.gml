@@ -32,14 +32,14 @@
 
 
 // Block player from moving from outside the room.
-	if (current_x < 50) {
+	if (current_x < 2) {
 		current_xacc = 0;
-	} else if (current_x > (room_width - 50)) {
+	} else if (current_x > (room_width -sprite_width -2)) {
 		current_xacc = 0;
 	}
-	if (current_x == 50) {
+	if (current_x == 2) {
 		current_xacc = max(0, current_xacc);
-	} else if (current_x = (room_width - 50)) {
+	} else if (current_x = (room_width -sprite_width -2)) {
 		current_xacc = min(0, current_xacc);
 	}
 
@@ -62,13 +62,13 @@
 	}
 
 // Block player from moving from outside the room.
-	if (current_y < 20) {
+	if (current_y < 2) {
 		current_yacc = 0;
-	} else if (current_y > (room_height - 20)) {
+	} else if (current_y > (room_height -sprite_height -2)) {
 		current_yacc = 0;
 	}
-	if (current_y == 20) {
+	if (current_y == 2) {
 		current_yacc = max(0, current_yacc);
-	} else if (current_y = (room_height - 20)) {
+	} else if (current_y = (room_height -sprite_height -2)) {
 		current_yacc = min(0, current_yacc);
 	}

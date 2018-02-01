@@ -11,7 +11,7 @@
 	script_execute(scr_general_init);
 
 // Movement Parameters.
-	max_speed = 500;
+	max_speed = 750;
 	
 // Input variables
     direction_horizontal = 0;
