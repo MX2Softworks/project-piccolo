@@ -1,17 +1,5 @@
 /// @description Calculates the players acceleration based on the state of the player.
 
-	if(on_ground && (place_meeting(x, y-1, obj_solid) || place_meeting(x,y-sprite_height, obj_solid))){
-		down = 1;
-		down_held = 1;
-		down_released = 0; 
-		
-		up = 0;
-		up_held = 0;
-		up_released = 0;
-		
-		direction_vertical = 1; 
-	}
-
 /// Horizontal Acceleration
 
 	current_xacc = previous_xacc + (115200 * global.dt) * direction_horizontal;

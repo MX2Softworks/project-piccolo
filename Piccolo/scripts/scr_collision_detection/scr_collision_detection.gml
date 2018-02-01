@@ -16,6 +16,7 @@ if (sign(movedis_x) == 1) {
 	xrem += movedis_x - ceil(movedis_x);
 	movedis_x = ceil(movedis_x);
 }
+// TODO: Allow more than 1 pixel of moment to be added from the remainder.
 if (abs(xrem) >= 1) {
 	movedis_x += sign(xrem);
 	xrem -= sign(xrem);
@@ -54,6 +55,7 @@ if (sign(movedis_y) == 1) {
 	yrem += movedis_y - ceil(movedis_y);
 	movedis_y = ceil(movedis_y);
 }
+// TODO: Allow more than 1 pixel of moment to be added from the remainder.
 if (abs(yrem) >= 1) {
 	movedis_y += sign(yrem);
 	yrem -= sign(yrem);
