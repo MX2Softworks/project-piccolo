@@ -8,7 +8,4 @@ obj_player.y = room_start_y;
 script_execute(scr_general_init);
 
 
-//tells the AI to regenerate their grids. 
-global.re_grid = true;
-
 

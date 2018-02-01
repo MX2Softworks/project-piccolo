@@ -10,7 +10,6 @@
 
 
 // Do not allow horizontal speed when colliding with a wall.
-
 	if (place_meeting(current_x-1, current_y, obj_solid)) {
 		current_hspd = clamp(current_hspd, 0, max_speed);
 	}
@@ -65,7 +64,7 @@
 		current_y =  2;
 		current_vspd = 0;
 	} else if (current_y > (room_height -sprite_height -2)) {
-		current_y = room_height -sprite_height -20;
+		current_y = room_height -sprite_height -2;
 		current_vspd = 0;
 	}
 	if (current_y == 2) {
