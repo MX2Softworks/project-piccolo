@@ -25,20 +25,6 @@ down_released = keyboard_check_released(vk_down) || keyboard_check_released(ord(
 direction_vertical = max(down, down_held) - max(up, up_held); 
 direction_horizontal = max(right, right_held) - max(left, left_held); 
         
-sprint = keyboard_check(vk_shift);
-dash = keyboard_check_pressed(ord("F"));
-dash_held = keyboard_check(ord("F"));
-dash_released = keyboard_check_released(ord("F"));
-charge_dash = keyboard_check_pressed(ord("G"));
-charge_dash_held = keyboard_check(ord("G"));
-charge_dash_released = keyboard_check_released(ord("G"));
-grab = keyboard_check(ord("T"));
-        
-wall_push = keyboard_check_pressed(ord("H"));
-        
-open_door = keyboard_check_pressed(ord("C"));
-        
-pickup_item = keyboard_check_pressed(ord("C"));
 
 
 
