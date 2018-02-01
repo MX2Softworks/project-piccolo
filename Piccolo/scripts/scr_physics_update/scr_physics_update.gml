@@ -24,9 +24,6 @@ var scr_state = argument3;
 
 	// Now that we have our next position, do collision detection.
 	script_execute(scr_collision_detection, collision);
-	
-	// Also update whether our new position is on the ground or not.
-	script_execute(scr_on_ground_check, current_x, current_y);
 
 // REMEMBER TO CLEAR REMAINDERS!!!!!!!!
 

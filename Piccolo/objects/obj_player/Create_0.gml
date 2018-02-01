@@ -1,4 +1,8 @@
 /// Initialize the player.
+	
+	//creates a framerate independent object.
+	if(!instance_exists(obj_frame_rate_independence)) instance_create_depth(x, y, depth, obj_frame_rate_independence);
+
 
 // Move the player out of all objects, if any, when they are spawned.
 	scr_fix_spawn(obj_all);
