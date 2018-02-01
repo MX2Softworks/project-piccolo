@@ -25,10 +25,10 @@
     down_held = false;
     down_released = false;
     
-
 // Temp.
 	fullscreen = false;
 	window_set_fullscreen(fullscreen);
+	
 // Reset.
 	room_start_x = x;
 	room_start_y = y;
