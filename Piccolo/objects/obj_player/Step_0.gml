@@ -9,11 +9,6 @@ scr_get_input();
 // Call the render script for the player.
 //script_execute(scr_render, obj_solid, scr_player_accel, scr_player_velo_mod, scr_player_state, scr_player_anim);
 
-if(place_meeting(x,y, obj_death)){
-
-	script_execute(scr_reset_room); 
-}
-
 if(keyboard_check_pressed(vk_f1)){
 	fullscreen = !fullscreen;
 	window_set_fullscreen(fullscreen);
