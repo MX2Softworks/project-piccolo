@@ -1,13 +1,9 @@
 /// @description Modifies the velocity after the verlet calculation.
 
-
-
 /// Horizontal Speed
+
 // Limit max speed.
-
-	
 	current_hspd = clamp(current_hspd, -1 * max_speed, max_speed);
-
 
 // Do not allow horizontal speed when colliding with a wall.
 	if (place_meeting(current_x-1, current_y, obj_solid)) {
@@ -25,26 +21,12 @@
 	}
 
 
-// Block player from moving from outside the room.
-	if (current_x < 2) {
-		current_x = 2;
-		current_hspd = 0;
-	} else if (current_x > (room_width -sprite_width -2)) {
-		current_x = room_width -sprite_width -2;
-		current_hspd = 0;
-	}
-	if (current_x == 2) {
-		current_hspd = max(0, current_hspd);
-	} else if (current_x = (room_width - 2)) {
-		current_hspd = min(0, current_hspd);
-	}
-
+/// Vertical Speed
 
 // Limit max speed.
 	current_vspd = clamp(current_vspd, -1 * max_speed, max_speed);
 
-// Do not allow horizontal speed when colliding with a wall.
-
+// Do not allow vertical speed when colliding with a wall.
 	if (place_meeting(current_x, current_y-1, obj_solid)) {
 		current_vspd = clamp(current_vspd, 0, max_speed);
 	}
@@ -59,7 +41,20 @@
 		yrem = 0;
 	}
 
+
 // Block player from moving from outside the room.
+	if (current_x < 2) {
+		current_x = 2;
+		current_hspd = 0;
+	} else if (current_x > (room_width -sprite_width -2)) {
+		current_x = room_width -sprite_width -2;
+		current_hspd = 0;
+	}
+	if (current_x == 2) {
+		current_hspd = max(0, current_hspd);
+	} else if (current_x = (room_width - 2)) {
+		current_hspd = min(0, current_hspd);
+	}
 	if (current_y < 2) {
 		current_y =  2;
 		current_vspd = 0;
