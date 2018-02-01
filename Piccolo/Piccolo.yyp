@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "841aba45-e0a9-4dbe-ace2-817b384f8ae5",
+            "Value": {
+                "id": "74cd5fd4-8f68-4640-94b7-5e2eadfaa64f",
+                "resourcePath": "objects\\obj_frame_rate_independence\\obj_frame_rate_independence.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8797a58a-9ee5-4099-b4a2-7ff31d93fe72",
             "Value": {
                 "id": "ad53ce18-2a70-4d17-9562-e6b1931a824b",
