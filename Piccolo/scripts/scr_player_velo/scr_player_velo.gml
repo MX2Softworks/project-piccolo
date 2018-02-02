@@ -41,16 +41,6 @@
 		yrem = 0;
 	}
 
-// Calculate total speed.
-	total_spd = sqrt(power(current_vspd, 2) + power(current_hspd, 2));
-
-// Limit diagnonal speed by way of normalization
-	if (total_spd > max_speed) {
-		//current_hspd = current_hspd * (sqrt(2)/2);
-		current_hspd = clamp(current_hspd, -1 * max_speed * (sqrt(2)/2), max_speed * (sqrt(2)/2));
-		//current_vspd = current_vspd * (sqrt(2)/2);
-		current_vspd = clamp(current_vspd, -1 * max_speed * (sqrt(2)/2), max_speed * (sqrt(2)/2));
-	}
 
 // Block player from moving from outside the room.
 	if (current_x < 2) {
@@ -77,3 +67,17 @@
 	} else if (current_y = (room_height - 2)) {
 		current_vspd = min(0, current_vspd);
 	}
+
+// Calculate total speed.
+	total_spd = sqrt(power(current_vspd, 2) + power(current_hspd, 2));
+
+// Limit diagnonal speed by way of normalization
+	if (total_spd > max_speed) {
+		//current_hspd = current_hspd * (sqrt(2)/2);
+		current_hspd = clamp(current_hspd, -1 * max_speed * (sqrt(2)/2), max_speed * (sqrt(2)/2));
+		//current_vspd = current_vspd * (sqrt(2)/2);
+		current_vspd = clamp(current_vspd, -1 * max_speed * (sqrt(2)/2), max_speed * (sqrt(2)/2));
+		
+		total_spd = sqrt(power(current_vspd, 2) + power(current_hspd, 2));
+	}
+	
