@@ -41,6 +41,15 @@
 		yrem = 0;
 	}
 
+// Limit diagnonal speed by way of normalization
+	if (total_spd > max_speed) { 
+		
+		current_hspd = current_hspd * (sqrt(2)/2);
+		//current_hspd = current_hspd / total_spd
+		
+		current_vspd = current_vspd * (sqrt(2)/2);
+		//current_vspd = current_vspd / total_spd
+	}
 
 // Block player from moving from outside the room.
 	if (current_x < 2) {

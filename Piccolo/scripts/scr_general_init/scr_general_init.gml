@@ -5,6 +5,7 @@
     current_hspd = 0;
 	previous_vspd = 0;
     current_vspd = 0;
+	total_spd = 0;
 	previous_x = x;
 	current_x = x;
 	previous_y = y;
