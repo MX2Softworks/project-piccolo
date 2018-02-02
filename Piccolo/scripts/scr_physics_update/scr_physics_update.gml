@@ -18,9 +18,6 @@ var scr_state = argument3;
 	previous_x = current_x;
 	previous_y = current_y;
 
-	// Calculate total speed
-	total_spd = sqrt(power(current_vspd, 2) + power(current_hspd, 2));
-
 	// Using the passed velocities and accelerations calculate our next position.
 	current_x = previous_x + current_hspd * global.dt + (1/2) * previous_xacc * global.dt * global.dt;
 	current_y = previous_y + current_vspd * global.dt + (1/2) * previous_yacc * global.dt * global.dt;
