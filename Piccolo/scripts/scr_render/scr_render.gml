@@ -16,9 +16,14 @@ var scr_anim = argument4;
 	
 // Update physics potentially multiple times to keep up to date.
 	while (accumulator >= global.dt) {
-		scr_physics_update(collision, scr_accel, scr_velo_mod, scr_state);
-		script_execute(scr_reset_input);
+		if (attack) {
+			scr_player_attack();
+		} else {
+			scr_physics_update(collision, scr_accel, scr_velo_mod, scr_state);
+		}
 		
+		
+		script_execute(scr_reset_input);
 		accumulator -= global.dt;
 	}
 	

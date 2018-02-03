@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "7e60736d-904e-4705-8d1c-4490d3092df5",
+            "Value": {
+                "id": "c789ceea-0c51-4bde-87b2-323fdbe9a190",
+                "resourcePath": "scripts\\scr_player_attack\\scr_player_attack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "841aba45-e0a9-4dbe-ace2-817b384f8ae5",
             "Value": {
                 "id": "74cd5fd4-8f68-4640-94b7-5e2eadfaa64f",
@@ -347,7 +355,8 @@
         "b3ef2937-4702-44ef-8c68-bf1f29c08edc",
         "b83839a5-0d27-476a-b0b5-c5d83b388f45",
         "18e300b6-a66b-40e2-9a37-3549b9c04599",
-        "ba3b0769-9b96-4ad5-b408-5d5d1388543f"
+        "ba3b0769-9b96-4ad5-b408-5d5d1388543f",
+        "7e60736d-904e-4705-8d1c-4490d3092df5"
     ],
     "tutorial": ""
 }

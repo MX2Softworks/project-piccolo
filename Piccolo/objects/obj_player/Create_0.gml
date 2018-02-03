@@ -13,7 +13,7 @@
 // Movement Parameters.
 	max_speed = 450;
 	
-// Input variables
+// Input variables.
     direction_horizontal = 0;
     direction_vertical = 0;
     right = false;
@@ -28,6 +28,14 @@
     down = false;
     down_held = false;
     down_released = false;
+
+// State variables.
+	movement = true;
+	attack = false;
+
+// Attack variables.
+	attack_start = false;
+	attack_end = true;
     
 // Temp.
 	fullscreen = false;
