@@ -35,7 +35,8 @@
 
 // Attack variables.
 	attack_start = false;
-	attack_end = true;
+	attack_end = false;
+	attacking = false;
     
 // Temp.
 	fullscreen = false;
