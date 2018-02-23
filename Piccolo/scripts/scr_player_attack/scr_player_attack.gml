@@ -10,7 +10,7 @@ if (attack_end) {
 } else {
 	if (!attack_start) {
 		// Start attack.
-		instance_create_layer(obj_player.x-1, obj_player.y+31, "Instances", obj_stab);
+		instance_create_layer(obj_player.x-64, obj_player.y+5, "Instances", obj_stab);
 		attack_start = true;
 		attacking = true;
 	}
