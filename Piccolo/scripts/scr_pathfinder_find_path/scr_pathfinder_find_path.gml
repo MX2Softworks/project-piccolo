@@ -27,7 +27,7 @@
 		search_limit = 1500;
 	
 		//make a new location
-		location = [-1,-1]
+		location = [-1]
 		location[L.xy] = start_y * grid_x_dim + start_x
 		end_location_xy = end_y * grid_x_dim + end_x
 	
@@ -132,7 +132,7 @@
 		//mark this node as in the closed list.
 		node = nodes[|location[L.xy]];
 		node[PNF.status] = is_closed;
-		nodes[|location[L.xy]] = node_list;
+		nodes[|location[L.xy]] = node;
 		closed_node_counter++;
 	}	
 	if (found){

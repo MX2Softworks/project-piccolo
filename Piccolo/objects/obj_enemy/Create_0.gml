@@ -21,8 +21,6 @@ script_execute(scr_general_init);
 	var agent_id = id;
 	with(pathfinder){
 		self.my_agent = agent_id;
-		self.max_character_jump_height = self.character_height * 2;
-		self.speed_factor = 3;
 	}
 	curr_chunk_x = floor(x/pathfinder.chunk_size);
 	curr_chunk_y = floor(y/pathfinder.chunk_size);

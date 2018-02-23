@@ -3,6 +3,8 @@ if(my_agent != "")
 
 	x = my_agent.x;
 	y = my_agent.y;
+	start_x = floor(my_agent.x);
+	start_y = floor(my_agent.y);
 }
 
 //This allows us to click and place the chaser to different places on the map. 
@@ -46,10 +48,10 @@ if(regen_graph){
 }
 
 //check the player's current location to see if we should restart our search or continue a previous one.
-if(obj_player && (search_counter > 10 || search_counter == 0)){
-	end_x = floor(obj_player / chunk_size);
-	end_y = floor(obj_player / chunk_size); 
-}	
+//if(obj_player /*&& (search_counter > 10 || search_counter == 0)*/){
+	end_x = floor(obj_player.x / chunk_size);
+	end_y = floor(obj_player.y / chunk_size); 
+//}	
 
 //start a search if we press U or if a previous search from last frame is going. 
 if(find_path || keyboard_check_pressed(ord("U")) || !((found && stopped) || (!found && !stopped) || search_counter > 10)){

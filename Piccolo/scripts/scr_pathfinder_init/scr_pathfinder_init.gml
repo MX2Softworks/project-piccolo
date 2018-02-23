@@ -1,5 +1,5 @@
 enum L{
-	xy = 0,
+	xy = 0
 }
 
 enum PNF{
@@ -7,7 +7,7 @@ enum PNF{
 	G = 1,
 	PX = 2,
 	PY = 3,
-	status = 5,
+	status = 4
 }
 
 search_counter = 0;
