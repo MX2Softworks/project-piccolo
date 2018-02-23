@@ -1,6 +1,5 @@
 enum L{
 	xy = 0,
-	z = 1
 }
 
 enum PNF{
@@ -8,22 +7,9 @@ enum PNF{
 	G = 1,
 	PX = 2,
 	PY = 3,
-	PZ = 4,
 	status = 5,
-	jump_length =6
-
 }
 
- 
-//Diagonals = true;
-//mPunishChangeDirection  = false;
-//mTieBreaker = false;
-//mHeavyDiagonals  = false;
-//completed_time  = 0;
-
-on_ground_list = "";
-at_ceiling_list = "";
-wall_jump_list = "";
 search_counter = 0;
 
 find_path = false;
@@ -37,7 +23,6 @@ start_y = -1;
 max_value = 2000000000
 
 nodes = ""; //a list of a (list of nodes) in our graph. 
-touched_locations = ""; //places we've modified, used in optimizations.
 open_list = "";
 closed_list = "";
 stop = false;
@@ -92,25 +77,12 @@ if (nodes == "" || ds_list_size(nodes) != (grid_x_dim * grid_y_dim))
 	//init nodes
 	
 	if(nodes != ""){
-	
-		for(var index = 0; index < ds_list_size(nodes); index++){
-			node_list = nodes[|index];
-			ds_list_destroy(node_list);
-		}
 		ds_list_destroy(nodes);
 	}
 	nodes = ds_list_create();
 	for(var index = 0; index < grid_x_dim * grid_y_dim; index++){
-		nodes[|index] =  ds_list_create();
+		nodes[|index] = [-1, -1]
 	}
-	
-	//init touched_locations
-	if(touched_locations != "")
-	{
-		ds_stack_clear(touched_locations);
-		ds_stack_destroy(touched_locations);
-	}
-    touched_locations = ds_stack_create(); //touched_locations = new stack of ints that is the size of grid_x_dim * grid_y_dim
 	
 	//init closed list
 	if(closed_list != ""){
@@ -120,10 +92,6 @@ if (nodes == "" || ds_list_size(nodes) != (grid_x_dim * grid_y_dim))
 	for(var index = 0; index < grid_x_dim * grid_y_dim; index++){
 		closed_list[|index] = [-1, -1]
 	}
-}
-
-for (var i = 0; i < ds_list_size(nodes); ++i){
-	ds_list_clear(nodes[|i]);
 }
 
 if(open_list != ""){

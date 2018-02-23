@@ -1,5 +1,3 @@
-
-
 if(my_agent != "")
 {
 
@@ -41,18 +39,16 @@ if(selected){
 
 
 //Regenerates the graph the chunk size changes. 
-if(regen_graph || global.re_grid){
+if(regen_graph){
 	
 	regen_graph = false;
-	
 	scr_pathfinder_init(search_limit, diagonal_valid);
 }
 
 //check the player's current location to see if we should restart our search or continue a previous one.
-	
 if(obj_player && (search_counter > 10 || search_counter == 0)){
-	end_x = floor(obj_player.last_on_ground[0] / chunk_size);
-	end_y = floor(obj_player.last_on_ground[1] / chunk_size); 
+	end_x = floor(obj_player / chunk_size);
+	end_y = floor(obj_player / chunk_size); 
 }	
 
 //start a search if we press U or if a previous search from last frame is going. 
